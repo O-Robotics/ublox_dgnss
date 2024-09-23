@@ -1,4 +1,4 @@
-# ublox-dgnss ZED-F9
+# ublox-dgnss ZED-F9P
 - [Install Differential GNSS Package](#install-differential-gnss-package)
 - [ROS2 Launch NavSatFix](#ros2-launch-navsatfix)
 - [ROS2 Command](#ros2-command)

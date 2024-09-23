@@ -1,9 +1,9 @@
 # ublox-dgnss ZED-F9
 - [Install Differential GNSS Package](#install-differential-gnss-package)
 - [Official Documentation](#official-doc)
-- [ROS2 Launch](#ros2-launch)
+- [ROS2 Launch NavSatFix](#ros2-launch-navsatfix)
 - [ROS2 Command](#ros2-command)
-
+- [ROS2 Echo NavSatFix](#ros2-echo-navsatfix)
 
 Those are included on cm4_docker README file
 ## Install differential GNSS package
@@ -46,7 +46,7 @@ cd ~/ros2_ws
 colcon build --packages-select ublox_dgnss
 ```
 
-## Ros2 launch
+## Ros2 launch NavSatFix
 ```
 source ~/ros2_ws/install/setup.bash
 ```
@@ -57,7 +57,23 @@ ros2 launch ublox_dgnss ublox_rover_hpposllh_navsatfix.launch.py
 
 ## Ros2 command
 
-
+Get and change parameters
+```
+ros2 param get /ublox_dgnss CFG_MSGOUT_UBX_NAV_PVT_USB
+```
+```
+ros2 param set /ublox_dgnss CFG_MSGOUT_UBX_NAV_PVT_USB 1
+```
+## Ros2 echo NavSatFix
+Only when those three could be correctly published, the /fix could be published.
+```
+ros2 topic echo /ubx_nav_status
+ros2 topic echo /ubx_nav_hp_pos_llh
+ros2 topic echo /ubx_nav_cov
+```
+```
+ros2 topic list
+```
 ## Official doc
 * Below are official documentation.
 

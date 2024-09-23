@@ -1,4 +1,65 @@
-# ublox-dgnss
+# ublox-dgnss ZED-F9
+- [Install Differential GNSS Package](#install-differential-gnss-package)
+- [Official Documentation](#official-doc)
+- [ROS2 Launch](#ros2-launch)
+- [ROS2 Command](#ros2-command)
+
+
+Those are included on cm4_docker README file
+## Install differential GNSS package
+```
+cd ~/ros2_ws/src
+git clone https://github.com/O-Robotics/ublox_dgnss.git
+```
+
+### Setting up a udev rule
+```
+sudo nano /etc/udev/rules.d/99-ublox-gnss.rules
+```
+
+### Add the following content:
+```
+ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a9", MODE="0666", GROUP="plugdev"
+```
+
+### Save and exit (Ctrl + O, Enter, then Ctrl + X)., then reload the udev rules:
+```
+sudo udevadm control --reload-rules
+```
+
+### To verify that the udev rule is working
+```
+lsusb
+```
+
+### Check the device permissions (e.g., Bus 001 Device 022).
+```
+ls -l /dev/bus/usb/<bus_number>/<device_number>
+```
+### If it shows like below,in plugdev group and has root permission, then done:
+
+crw-rw-rw- 1 root plugdev 189, 21 Aug  2 15:53 /dev/bus/usb/001/022
+
+### Build the workspace:
+```
+cd ~/ros2_ws
+colcon build --packages-select ublox_dgnss
+```
+
+## Ros2 launch
+```
+source ~/ros2_ws/install/setup.bash
+```
+```
+ros2 launch ublox_dgnss ublox_rover_hpposllh_navsatfix.launch.py
+```
+
+
+## Ros2 command
+
+
+## Official doc
+* Below are official documentation.
 
 This usb based driver is focused on UBLOX Generation 9 UBX messaging, for a DGNSS rover. High precision data is available. A moving base station configuration has been added.
 

@@ -1,9 +1,9 @@
 # ublox-dgnss ZED-F9
 - [Install Differential GNSS Package](#install-differential-gnss-package)
-- [Official Documentation](#official-doc)
 - [ROS2 Launch NavSatFix](#ros2-launch-navsatfix)
 - [ROS2 Command](#ros2-command)
 - [ROS2 Echo NavSatFix](#ros2-echo-navsatfix)
+- [Official Documentation](#official-doc)
 
 
 'Install differential GNSS package' are included on [Setup_Rpi_CM4_docker](https://github.com/O-Robotics/Setup_Rpi_CM4_docker) README file too, on 4. Hardware settings for GNSS

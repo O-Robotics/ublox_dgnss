@@ -5,7 +5,8 @@
 - [ROS2 Command](#ros2-command)
 - [ROS2 Echo NavSatFix](#ros2-echo-navsatfix)
 
-Those are included on cm4_docker README file
+
+'Install differential GNSS package' are included on [Setup_Rpi_CM4_docker](https://github.com/O-Robotics/Setup_Rpi_CM4_docker) README file too, on 4. Hardware settings for GNSS
 ## Install differential GNSS package
 ```
 cd ~/ros2_ws/src

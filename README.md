@@ -41,6 +41,23 @@ ls -l /dev/bus/usb/<bus_number>/<device_number>
 
 crw-rw-rw- 1 root plugdev 189, 21 Aug  2 15:53 /dev/bus/usb/001/022
 
+### Before build the workspace
+Make sure you have the dependencies:
+```
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+Check that the following packages have been built:
+- ublox_ubx_interfaces
+- ublox_dgnss_node
+- ublox_nav_sat_fix_hp_node
+```
+cd ~/ros2_ws
+colcon build --packages-select ublox_dgnss_node ublox_nav_sat_fix_hp_node
+```
+
 ### Build the workspace:
 ```
 cd ~/ros2_ws

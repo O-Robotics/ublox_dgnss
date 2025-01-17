@@ -51,11 +51,12 @@ rosdep install --from-paths src --ignore-src -r -y
 
 Check that the following packages have been built:
 - ublox_ubx_interfaces
+- ublox_ubx_msgs
 - ublox_dgnss_node
 - ublox_nav_sat_fix_hp_node
 ```
 cd ~/ros2_ws
-colcon build --packages-select ublox_dgnss_node ublox_nav_sat_fix_hp_node
+colcon build --packages-select ublox_ubx_interfaces ublox_ubx_msgs ublox_dgnss_node ublox_nav_sat_fix_hp_node ntrip_client_node
 ```
 
 ### Build the workspace:

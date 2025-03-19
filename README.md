@@ -47,9 +47,10 @@ Make sure you have the dependencies:
 sudo rosdep init
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
+colcon build --symlink-install
 ```
 
-Check that the following packages have been built:
+Possible error - require dependent packages (have been built already):
 - ublox_ubx_interfaces
 - ublox_ubx_msgs
 - ublox_dgnss_node

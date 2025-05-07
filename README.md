@@ -8,6 +8,8 @@
 
 'Install differential GNSS package' are included on [Setup_Rpi_CM4_docker](https://github.com/O-Robotics/Setup_Rpi_CM4_docker) README file too, on 4. Hardware settings for GNSS
 ## Install differential GNSS package
+
+Replace the ros2_ws with your named workspace, e.g. in nano-0001 is `gnss_ws`
 ```
 cd ~/ros2_ws/src
 git clone https://github.com/O-Robotics/ublox_dgnss.git

@@ -52,7 +52,20 @@ rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install
 ```
 
-Possible error - require dependent packages (have been built already):
+Possible error 1 - lacking package of rtcm
+```
+cd ~/gnss_ws/src
+git clone https://github.com/tilk/rtcm_msgs.git
+```
+
+After install the package, build again:
+```
+cd ~/gnss_ws
+colcon build --symlink-install
+```
+
+
+Possible error 2 - require dependent packages (have been built already):
 - ublox_ubx_interfaces
 - ublox_ubx_msgs
 - ublox_dgnss_node

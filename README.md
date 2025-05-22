@@ -83,7 +83,7 @@ colcon build --packages-select ublox_dgnss
 
 ## Ros2 launch NavSatFix
 ```
-source ~/ros2_ws/install/setup.bash
+source ~/gnss_ws/install/setup.bash
 ```
 ```
 ros2 launch ublox_dgnss ublox_rover_hpposllh_navsatfix.launch.py

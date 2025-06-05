@@ -22,7 +22,7 @@ sudo nano /etc/udev/rules.d/99-ublox-gnss.rules
 
 ### Add the following content:
 ```
-ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a9", MODE="0666", GROUP="plugdev"
+ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a9", MODE="0666"
 ```
 
 ### Save and exit (Ctrl + O, Enter, then Ctrl + X)., then reload the udev rules:

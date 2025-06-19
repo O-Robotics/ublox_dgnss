@@ -52,16 +52,14 @@ rosdep install --from-paths src --ignore-src -r -y
 colcon build --symlink-install
 ```
 
-Possible error 1 - lacking package of rtcm
+Possible error 1 - lacking package of rtcm, cd your workspace/src:
 ```
-cd ~/gnss_ws/src
 git clone https://github.com/tilk/rtcm_msgs.git
 ```
 
-After install the package, build again:
+After install the package, build again in your workspcace:
 ```
-cd ~/gnss_ws
-colcon build --symlink-install
+colcon build --packages-select rtcm_msgs
 ```
 
 
@@ -70,14 +68,13 @@ Possible error 2 - require dependent packages (have been built already):
 - ublox_ubx_msgs
 - ublox_dgnss_node
 - ublox_nav_sat_fix_hp_node
+  
 ```
-cd ~/ros2_ws
 colcon build --packages-select ublox_ubx_interfaces ublox_ubx_msgs ublox_dgnss_node ublox_nav_sat_fix_hp_node ntrip_client_node
 ```
 
 ### Build the workspace:
 ```
-cd ~/ros2_ws
 colcon build --packages-select ublox_dgnss
 ```
 

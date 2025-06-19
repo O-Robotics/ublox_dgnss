@@ -41,7 +41,7 @@ ls -l /dev/bus/usb/<bus_number>/<device_number>
 ```
 ### If it shows like below,in plugdev group and has root permission, then done:
 
-crw-rw-rw- 1 root plugdev 189, 21 Aug  2 15:53 /dev/bus/usb/001/022
+crw-rw-rw- 1 root root 189, 21 Aug  2 15:53 /dev/bus/usb/001/022
 
 ### Before build the workspace
 Make sure you have the dependencies:

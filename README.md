@@ -89,7 +89,7 @@ ros2 launch ublox_dgnss ublox_rover_hpposllh_navsatfix.launch.py
 
 ## Ros2 command
 
-Get and change parameters
+Get and change parameters // Now you do not need to change manually
 ```
 ros2 param get /ublox_dgnss CFG_MSGOUT_UBX_NAV_PVT_USB
 ```
